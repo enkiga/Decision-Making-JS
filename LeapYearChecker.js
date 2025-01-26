@@ -3,15 +3,8 @@ Create a function that takes a year as input and determines whether it is a leap
 Leap years are divisible by 4, but not by 100 unless they are also divisible by 400. 
 */
 
-const isLeapYear = (year) => {
-    if (year % 4 === 0) {
-        if (year % 100 === 0 && year % 400 !== 0) {
-            return false;
-        }
-        return true;
-    }
-    return false;
-}
+const isLeapYear = (year) =>
+  (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 
 // Test cases
 console.log(isLeapYear(2000)); // Expected: true
